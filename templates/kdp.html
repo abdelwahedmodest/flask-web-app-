@@ -1,0 +1,269 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+			<fieldset class="form-group">
+                <legend class="border-bottom mb-4">Filling KDP Form </legend>
+			
+			<div class="form-group">
+         {{ form.BookTitle.label(class="form-control-label") }}
+
+                    {% if form.BookTitle.errors %}
+                        {{ form.BookTitle(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.BookTitle.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.BookTitle(class="form-control form-control-lg") }}
+                    {% endif %}
+			</div>
+			
+			<div class="form-group">
+         {{ form.Subtitle.label(class="form-control-label") }}
+
+                    {% if form.Subtitle.errors %}
+                        {{ form.Subtitle(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Subtitle.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Subtitle(class="form-control form-control-lg") }}
+                    {% endif %}
+						</div>
+						
+			<div class="form-group">
+         {{ form.Series_Information.label(class="form-control-label") }}
+
+                    {% if form.Series_Information.errors %}
+                        {{ form.Series_Information(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Series_Information.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Series_Information(class="form-control form-control-lg") }}
+                    {% endif %}
+			</div>
+			
+			<div class="form-group">
+         {{ form.Edition_number.label(class="form-control-label") }}
+
+                    {% if form.Edition_number.errors %}
+                        {{ form.Edition_number(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Edition_number.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Edition_number(class="form-control form-control-lg") }}
+                    {% endif %}
+			</div>
+			
+			<div class="form-group">
+         {{ form.AuthorFirstName.label(class="form-control-label") }}
+
+                    {% if form.AuthorFirstName.errors %}
+                        {{ form.AuthorFirstName(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.AuthorFirstName.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.AuthorFirstName(class="form-control form-control-lg") }}
+                    {% endif %}
+			</div>
+			
+			<div class="form-group">
+         {{ form.AuthorLastName .label(class="form-control-label") }}
+
+                    {% if form.AuthorLastName .errors %}
+                        {{ form.AuthorLastName (class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.AuthorLastName .errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.AuthorLastName (class="form-control form-control-lg") }}
+                    {% endif %}
+			</div>
+			
+			<div class="form-group">
+         {{ form.ContributorFirstName .label(class="form-control-label") }}
+
+                    {% if form.ContributorFirstName .errors %}
+                        {{ form.ContributorFirstName (class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.ContributorFirstName .errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.ContributorFirstName (class="form-control form-control-lg") }}
+                    {% endif %}
+			</div>
+			<div class="form-group">
+         {{ form.ContributorLastName .label(class="form-control-label") }}
+
+                    {% if form.ContributorLastName .errors %}
+                        {{ form.ContributorLastName (class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.ContributorLastName .errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.ContributorLastName (class="form-control form-control-lg") }}
+                    {% endif %}
+			</div>
+			<div class="form-group">
+         {{ form.Description.label(class="form-control-label") }}
+
+                    {% if form.Description.errors %}
+                        {{ form.Description(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Description.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Description(class="form-control form-control-lg") }}
+                    {% endif %}
+					</div>
+					<div class="form-group">
+         {{ form.Keywords1.label(class="form-control-label") }}
+
+                    {% if form.Keywords1.errors %}
+                        {{ form.Keywords1(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Keywords1.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Keywords1(class="form-control form-control-lg") }}
+                    {% endif %}
+					</div>
+					<div class="form-group">
+         {{ form.Keywords2.label(class="form-control-label") }}
+
+                    {% if form.Keywords2.errors %}
+                        {{ form.Keywords2(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Keywords2.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Keywords2(class="form-control form-control-lg") }}
+                    {% endif %}
+					</div>
+					<div class="form-group">
+         {{ form.Keywords3.label(class="form-control-label") }}
+
+                    {% if form.Keywords3.errors %}
+                        {{ form.Keywords3(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Keywords3.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Keywords3(class="form-control form-control-lg") }}
+                    {% endif %}
+					</div>
+					<div class="form-group">
+         {{ form.Keywords4.label(class="form-control-label") }}
+
+                    {% if form.Keywords4.errors %}
+                        {{ form.Keywords4(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Keywords4.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Keywords4(class="form-control form-control-lg") }}
+                    {% endif %}
+					</div>
+					<div class="form-group">
+         {{ form.Keywords5.label(class="form-control-label") }}
+
+                    {% if form.Keywords5.errors %}
+                        {{ form.Keywords5(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Keywords5.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Keywords5(class="form-control form-control-lg") }}
+                    {% endif %}
+					</div>
+					<div class="form-group">
+         {{ form.Keywords6.label(class="form-control-label") }}
+
+                    {% if form.Keywords6.errors %}
+                        {{ form.Keywords6(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Keywords6.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Keywords6(class="form-control form-control-lg") }}
+                    {% endif %}
+					</div>
+					<div class="form-group">
+         {{ form.Keywords7.label(class="form-control-label") }}
+
+                    {% if form.Keywords7.errors %}
+                        {{ form.Keywords7(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.Keywords7.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.Keywords7(class="form-control form-control-lg") }}
+                    {% endif %}
+					</div>
+<div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+			</fieldset>
+	<div>
+	{% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+	</div>
+
+
+			
+		</form>
+            
+			
+			
+            
+    
+
+
+	
+	
+	
+{% endblock content %}
+

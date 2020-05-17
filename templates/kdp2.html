@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="{{url_for('kdp')}}"  method="POST">
+
+<table  class="table table-hover  table-yellow " >
+	<tr  class="table table-dark ">
+		<th>BookTitle</th>
+		<th>Subtitle </th>
+		<th>SInformation</th>
+		<th>Enumber </th>
+		<th>AFirstName</th>
+		<th>ALastName </th>
+		<th>CFirstName </th>
+		<th>CLastName </th>
+		<th> Description</th>
+		<th>K1</th>
+		<th>K2</th>
+		<th>K3</th>
+		<th>K4</th>
+		<th>K5</th>
+		<th>K6</th>  
+		<th>K7 </th>  
+		</tr>
+{% for kdpinformation in kdpinformationst.items %}
+
+	<tr>
+	<td>{{kdpinformation.BookTitle}}</td>
+	<td>{{kdpinformation.BookTitle}}</td>
+	<td>{{ kdpinformation.Subtitle }}</td>
+	<td>{{kdpinformation.Series_Information}}</td>
+	<td>{{kdpinformation.Edition_number}}</td>
+	<td>{{kdpinformation.AuthorFirstName}}</td>
+	<td>{{kdpinformation.AuthorLastName }}</td>
+	<td>{{kdpinformation.ContributorFirstName}}</td>
+	<td>{{kdpinformation.ContributorLastName}}</td>
+	<td>{{kdpinformation.Description}}</td>
+	<td>{{kdpinformation.Keywords1}}</td>
+	<td>{{kdpinformation.Keywords2}}</td>
+	<td>{{kdpinformation.Keywords3}}</td>
+	<td>{{kdpinformation.Keywords4}}</td>
+	<td>{{kdpinformation.Keywords5}}</td>
+	<td>{{kdpinformation.Keywords6}}</td>
+	<td>{{kdpinformation.Keywords7}}</td>
+	
+	
+	</tr>
+	{% endfor  %}
+   </table>
+		
+</form>
+{% for page_num in kdpinformationst.iter_pages()  %}	
+{% if page_num %}
+<a class="btn btn-outline-info mb-4" href="{{ url_for('about', page=page_num) }}">{{ page_num }}</a>
+{% else %}
+{% endif %}
+{% endfor  %}
+
+
+{% endblock content %}

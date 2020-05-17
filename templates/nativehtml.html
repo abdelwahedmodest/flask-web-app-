@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<table  class="table table-hover  table-yellow " >
+	<tr  class="table table-dark ">
+	<th>image</th>
+	<th>link</th>
+	</tr>
+	
+	
+	{%for y in listsource %}
+	<tr>
+	<td><img src="{{y}}" alt=""></td>
+	<td>{{y}}</td>
+	</tr>
+
+	{% endfor %}
+
+
+</table>
+	
+	
+	
+
+<!-- <img src="{{listsource[1]}}" alt=""> -->
+	
+{% endblock content %}
+	
