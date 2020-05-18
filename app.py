@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from forms import RegistrationForm, LoginForm
 from werkzeug import generate_password_hash, check_password_hash
-import  cv2, time
+import  cv2, time, os
 
 
 
@@ -12,6 +12,7 @@ import  cv2, time
 #Flask
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
+#app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY','XYZ')
 
 #Database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/jannat/Desktop/WEBAPPDESCRIPTION/database.db'
