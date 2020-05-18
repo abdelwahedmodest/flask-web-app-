@@ -1,1 +1,1 @@
-web: gunicorn flask-web-app-.wsgi:application --log-file -
+web: gunicorn generatedescription.wsgi:application --log-file -
